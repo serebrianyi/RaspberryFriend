@@ -1,0 +1,5 @@
+{
+    "name": "from@jabber.de",
+    "password": "password",
+    "allowed_access": ["fake1@jabber.de/yaxim.fake1", "fake2@jabber.de/yaxim.fake2"]
+}

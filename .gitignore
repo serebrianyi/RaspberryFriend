@@ -1,0 +1,12 @@
+.idea/.name
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/PiShare.iml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.pyc
+.idea/workspace.xml
+*.jpg
+*.h264
+logs/log.txt

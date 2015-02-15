@@ -1,0 +1,16 @@
+{
+    "home_address": "from_address,+8152+Opfikon",
+    "work_address":
+    {
+        "fake1@jabber.de/yaxim.fake2" :
+        {
+            "target": "to_address,+Zuerich",
+            "waypoint": "Paradeplatz,+Zuerich"
+        },
+        "fake2@jabber.de/yaxim.fake2" :
+        {
+            "target": "to_address,+Zuerich",
+            "waypoint": "Paradeplatz,+Zuerich"
+        }
+    }
+}
