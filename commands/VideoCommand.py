@@ -1,5 +1,5 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
-from RaspberryFriend.handlers.VideoHandler import VideoHandler
+from commands.AbstractCommand import AbstractCommand
+from handlers.VideoHandler import VideoHandler
 
 
 class VideoCommand(AbstractCommand):

@@ -1,7 +1,7 @@
 import picamera
-from RaspberryFriend.domain_services.mail_service.MailService import MailService
+from domain_services.mail_service.MailService import MailService
 import os
-from RaspberryFriend.util.DateUtil import DateUtil
+from util.DateUtil import DateUtil
 
 
 class VideoHandler(object):

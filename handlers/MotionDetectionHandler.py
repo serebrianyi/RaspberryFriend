@@ -1,7 +1,7 @@
 import subprocess
 from datetime import datetime
-from RaspberryFriend.domain_services.logging_service.LoggingService import LoggingService
-from RaspberryFriend.handlers.VideoHandler import VideoHandler
+from domain_services.logging_service.LoggingService import LoggingService
+from handlers.VideoHandler import VideoHandler
 
 
 class MotionDetectionHandler(object):

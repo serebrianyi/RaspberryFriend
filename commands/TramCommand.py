@@ -1,7 +1,7 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
-from RaspberryFriend.configuration.Configuration import Configuration
-from RaspberryFriend.configuration.ConfigurationEnum import ConfigurationEnum
-from RaspberryFriend.handlers.TramHandler import TramHandler
+from commands.AbstractCommand import AbstractCommand
+from configuration.Configuration import Configuration
+from configuration.ConfigurationEnum import ConfigurationEnum
+from handlers.TramHandler import TramHandler
 
 
 class TramCommand(AbstractCommand):

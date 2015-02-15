@@ -1,9 +1,9 @@
-from RaspberryFriend.commands.StatusCommand import StatusCommand
-from RaspberryFriend.commands.UnknownCommand import UnknownCommand
-from RaspberryFriend.commands.TramCommand import TramCommand
-from RaspberryFriend.commands.DlnaCommand import DlnaCommand
-from RaspberryFriend.commands.PhotoCommand import PhotoCommand
-from RaspberryFriend.commands.VideoCommand import VideoCommand
+from commands.StatusCommand import StatusCommand
+from commands.UnknownCommand import UnknownCommand
+from commands.TramCommand import TramCommand
+from commands.DlnaCommand import DlnaCommand
+from commands.PhotoCommand import PhotoCommand
+from commands.VideoCommand import VideoCommand
 
 
 class CommandFactory(object):

@@ -1,5 +1,5 @@
 import unittest
-from RaspberryFriend.configuration.Configuration import Configuration
+from configuration.Configuration import Configuration
 from mock import MagicMock
 
 

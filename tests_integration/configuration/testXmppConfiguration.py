@@ -1,6 +1,6 @@
 import unittest
-from RaspberryFriend.configuration.Configuration import Configuration
-from RaspberryFriend.configuration.ConfigurationEnum import ConfigurationEnum
+from configuration.Configuration import Configuration
+from configuration.ConfigurationEnum import ConfigurationEnum
 
 
 class XmppConfigurationITCase(unittest.TestCase):

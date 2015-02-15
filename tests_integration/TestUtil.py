@@ -1,6 +1,6 @@
-from RaspberryFriend.configuration.Configuration import Configuration
-from RaspberryFriend.configuration.ConfigurationEnum import ConfigurationEnum
-from RaspberryFriend.domain_services.xmpp_service.XmppService import XmppService
+from configuration.Configuration import Configuration
+from configuration.ConfigurationEnum import ConfigurationEnum
+from domain_services.xmpp_service.XmppService import XmppService
 from mock import MagicMock
 import os
 

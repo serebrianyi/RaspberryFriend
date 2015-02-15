@@ -1,7 +1,7 @@
 import picamera
 import os
-from RaspberryFriend.domain_services.mail_service.MailService import MailService
-from RaspberryFriend.util.DateUtil import DateUtil
+from domain_services.mail_service.MailService import MailService
+from util.DateUtil import DateUtil
 
 
 class PhotoHandler(object):

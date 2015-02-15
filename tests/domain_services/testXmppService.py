@@ -1,9 +1,9 @@
 import unittest
-from RaspberryFriend.configuration.Configuration import Configuration
+from configuration.Configuration import Configuration
 from mock import MagicMock
 import sys
 sys.modules['RaspberryFriend.domain_services.logging_service.LoggingService'] = MagicMock()
-from RaspberryFriend.domain_services.xmpp_service.XmppService import XmppService
+from domain_services.xmpp_service.XmppService import XmppService
 
 
 class XmppServiceITCase(unittest.TestCase):

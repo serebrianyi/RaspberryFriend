@@ -1,5 +1,5 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
-from RaspberryFriend.handlers.DlnaHandler import DlnaHandler
+from commands.AbstractCommand import AbstractCommand
+from handlers.DlnaHandler import DlnaHandler
 
 
 class DlnaCommand(AbstractCommand):

@@ -1,7 +1,7 @@
 import unittest
 from mock import MagicMock
-from RaspberryFriend.commands.VideoCommand import VideoCommand
-from RaspberryFriend.handlers.VideoHandler import VideoHandler
+from commands.VideoCommand import VideoCommand
+from handlers.VideoHandler import VideoHandler
 
 
 class VideoCommandTestCase(unittest.TestCase):

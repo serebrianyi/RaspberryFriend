@@ -1,7 +1,7 @@
-from RaspberryFriend.commands.CommandFactory import CommandFactory
-from RaspberryFriend.commands.UnauthorizedCommand import UnauthorizedCommand
+from commands.CommandFactory import CommandFactory
+from commands.UnauthorizedCommand import UnauthorizedCommand
 from sleekxmpp import ClientXMPP
-from RaspberryFriend.domain_services.logging_service.LoggingService import LoggingService
+from domain_services.logging_service.LoggingService import LoggingService
 
 
 class XmppService(ClientXMPP):

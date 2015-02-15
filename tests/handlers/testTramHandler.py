@@ -1,5 +1,5 @@
 import unittest
-from RaspberryFriend.handlers.TramHandler import TramHandler
+from handlers.TramHandler import TramHandler
 from mock import MagicMock, call
 import json
 import time

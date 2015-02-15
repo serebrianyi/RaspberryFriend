@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
-from RaspberryFriend.configuration.Configuration import Configuration
-from RaspberryFriend.configuration.ConfigurationEnum import ConfigurationEnum
+from configuration.Configuration import Configuration
+from configuration.ConfigurationEnum import ConfigurationEnum
 
 
 class MotionDetectionService(object):

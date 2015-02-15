@@ -1,9 +1,9 @@
 import unittest
 from datetime import datetime, timedelta
-from RaspberryFriend.tests_integration.TestUtil import TestUtil
-from RaspberryFriend.configuration.Configuration import Configuration
+from tests_integration.TestUtil import TestUtil
+from configuration.Configuration import Configuration
 from mock import MagicMock
-from RaspberryFriend.handlers.MotionDetectionHandler import MotionDetectionHandler
+from handlers.MotionDetectionHandler import MotionDetectionHandler
 
 
 class MotionDetectionHandlerITCase(unittest.TestCase):

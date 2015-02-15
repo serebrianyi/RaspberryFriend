@@ -10,3 +10,7 @@
 *.jpg
 *.h264
 logs/log.txt
+configuration/files/tram.json
+configuration/files/wifi.json
+configuration/files/xmpp.json
+configuration/files/mail.json

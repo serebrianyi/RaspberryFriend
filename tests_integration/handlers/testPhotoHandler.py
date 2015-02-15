@@ -1,8 +1,8 @@
 import unittest
 from mock import patch
-from RaspberryFriend.util.DateUtil import DateUtil
+from util.DateUtil import DateUtil
 import os
-from RaspberryFriend.tests_integration.TestUtil import TestUtil
+from tests_integration.TestUtil import TestUtil
 
 
 class PhotoHandlerITCase(unittest.TestCase):

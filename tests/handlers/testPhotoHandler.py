@@ -1,5 +1,5 @@
 import unittest
-from RaspberryFriend.handlers.PhotoHandler import PhotoHandler
+from handlers.PhotoHandler import PhotoHandler
 from mock import MagicMock
 
 

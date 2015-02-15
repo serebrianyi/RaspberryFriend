@@ -1,5 +1,5 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
-from RaspberryFriend.handlers.PhotoHandler import PhotoHandler
+from commands.AbstractCommand import AbstractCommand
+from handlers.PhotoHandler import PhotoHandler
 
 
 class PhotoCommand(AbstractCommand):

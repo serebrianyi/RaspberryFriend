@@ -1,4 +1,4 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
+from commands.AbstractCommand import AbstractCommand
 
 
 class UnknownCommand(AbstractCommand):

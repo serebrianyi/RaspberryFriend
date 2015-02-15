@@ -1,7 +1,7 @@
 import unittest
 from mock import patch
-from RaspberryFriend.util.DateUtil import DateUtil
-from RaspberryFriend.tests_integration.TestUtil import TestUtil
+from util.DateUtil import DateUtil
+from tests_integration.TestUtil import TestUtil
 
 
 class StatusHandlerITCase(unittest.TestCase):

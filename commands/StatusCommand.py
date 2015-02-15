@@ -1,5 +1,5 @@
-from RaspberryFriend.commands.AbstractCommand import AbstractCommand
-from RaspberryFriend.handlers.StatusHandler import StatusHandler
+from commands.AbstractCommand import AbstractCommand
+from handlers.StatusHandler import StatusHandler
 
 
 class StatusCommand(AbstractCommand):

@@ -1,8 +1,8 @@
 import unittest
 from mock import MagicMock
-from RaspberryFriend.commands.TramCommand import TramCommand
-from RaspberryFriend.configuration.Configuration import Configuration
-from RaspberryFriend.handlers.TramHandler import TramHandler
+from commands.TramCommand import TramCommand
+from configuration.Configuration import Configuration
+from handlers.TramHandler import TramHandler
 
 
 class TramCommandTestCase(unittest.TestCase):

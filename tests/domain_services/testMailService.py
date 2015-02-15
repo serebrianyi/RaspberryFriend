@@ -1,7 +1,7 @@
 import unittest
-from RaspberryFriend.configuration.Configuration import Configuration
+from configuration.Configuration import Configuration
 from mock import MagicMock, call
-from RaspberryFriend.domain_services.mail_service.MailService import MailService
+from domain_services.mail_service.MailService import MailService
 
 class MailServiceTestCase(unittest.TestCase):
 

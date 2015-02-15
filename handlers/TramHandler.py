@@ -1,4 +1,4 @@
-from RaspberryFriend.util.DateUtil import DateUtil
+from util.DateUtil import DateUtil
 import requests
 
 

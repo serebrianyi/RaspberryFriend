@@ -1,7 +1,7 @@
 import unittest
-from RaspberryFriend.commands.CommandFactory import CommandFactory
-from RaspberryFriend.commands.UnknownCommand import UnknownCommand
-from RaspberryFriend.tests.commands.CommandMock import CommandMock
+from commands.CommandFactory import CommandFactory
+from commands.UnknownCommand import UnknownCommand
+from tests.commands.CommandMock import CommandMock
 
 
 class CommandFactoryTestCase(unittest.TestCase):

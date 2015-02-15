@@ -1,10 +1,10 @@
 import unittest
 import sys
 from mock import MagicMock
-from RaspberryFriend.configuration.Configuration import Configuration
+from configuration.Configuration import Configuration
 from datetime import datetime, timedelta
 sys.modules['RaspberryFriend.domain_services.logging_service.LoggingService'] = MagicMock()
-from RaspberryFriend.handlers.MotionDetectionHandler import MotionDetectionHandler
+from handlers.MotionDetectionHandler import MotionDetectionHandler
 
 class MotionDetectionHandlerTestCase(unittest.TestCase):
 
