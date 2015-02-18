@@ -4,6 +4,7 @@ from commands.TramCommand import TramCommand
 from commands.DlnaCommand import DlnaCommand
 from commands.PhotoCommand import PhotoCommand
 from commands.VideoCommand import VideoCommand
+from commands.QuoteCommand import QuoteCommand
 
 
 class CommandFactory(object):
@@ -12,7 +13,8 @@ class CommandFactory(object):
                       "tram": TramCommand,
                       "dlna": DlnaCommand,
                       "photo": PhotoCommand,
-                      "video": VideoCommand
+                      "video": VideoCommand,
+                      "quotes": QuoteCommand
     }
 
     @classmethod

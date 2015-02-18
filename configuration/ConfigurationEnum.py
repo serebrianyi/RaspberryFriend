@@ -6,3 +6,4 @@ class ConfigurationEnum(object):
     Mail = "mail"
     Gpio = "gpio"
     Wifi = "wifi"
+    Quote = "quote"
