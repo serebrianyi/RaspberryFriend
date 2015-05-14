@@ -35,7 +35,7 @@ Motion detection will be turned on automatically when your mobile (or mobiles, y
 # Installation
 * Clone the repository to your raspberry pi
 * Install all the dependencies: nose (unit testing framework), mock (python mocking library), requests (http library) and sleekxmpp (xmpp library)                                
---- ```pip install nose mock requests sleekxmpp```
+		```pip install nose mock requests sleekxmpp```
 * Follow the instructions from https://github.com/adafruit/Adafruit_Python_DHT to install the python library to read the DHT series of humidity and temperature sensors
 * Set the correct path for your log file in domain_services/logging_service/logging.conf
 * Set the values in the config files in configuration/files:
