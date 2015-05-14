@@ -14,7 +14,7 @@ if __name__ == '__main__':
     xmpp_service.connect()
     LoggingService.info("Connected")
     configuration_wifi = Configuration()
-    configuration_wifi.load(ConfigurationEnum.Wifi)
+    configuration_wifi.load(ConfigurationEnum.Ip)
     motion_detection_handler = MotionDetectionHandler(configuration_wifi, xmpp_service)
     motion_detection_service = MotionDetectionService()
     motion_detection_service.startObservation(motion_detection_handler.process)
