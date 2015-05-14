@@ -1,7 +1,7 @@
-import requests
 from configuration.Configuration import Configuration
 from configuration.ConfigurationEnum import ConfigurationEnum
 import os
+import requests
 
 class QuoteHandler(object):
 

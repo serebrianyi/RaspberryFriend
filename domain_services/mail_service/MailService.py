@@ -10,23 +10,24 @@ from email import encoders
 
 class MailService(object):
 
-    def send_plain(self, recipient):
-        configuration = self._get_configuration()
-        recipientMail = configuration.recipients[recipient]
-        mail = self._create_message(configuration, recipientMail)
-        self._pass_message_to_server(mail, configuration, recipientMail)
-
+    # send message with attachment to all configured recipients
     def send_to_all(self, filename):
         configuration = self._get_configuration()
         for key in configuration.recipients:
             self.send(key, filename)
 
+    # send message with attachment
     def send(self, recipient, filename):
         configuration = self._get_configuration()
         recipientMail = configuration.recipients[recipient]
         mail = self._create_message(configuration, recipientMail)
-        self._attach_file_to_message(mail, filename)
+        if filename is not None:
+            self._attach_file_to_message(mail, filename)
         self._pass_message_to_server(mail, configuration, recipientMail)
+
+    # send plain message without attachment
+    def send_plain(self, recipient):
+        self.send(recipient, None)
 
     def _create_message(self, configuration, recipient):
         mail = MIMEMultipart()

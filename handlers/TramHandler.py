@@ -31,15 +31,15 @@ class TramHandler(object):
         r = requests.get(url)
         return r.json()
 
-    def _get_lines(self, step):
+    def _get_line_number(self, step):
         if "transit_details" in step:
             return step["transit_details"]["line"]["short_name"]
         else:
             return None
 
     def _get_switches(self, response_after, response_before):
-        switches_before = list(map(lambda x: self._get_lines(x), response_before["routes"][0]["legs"][0]["steps"]))
-        switches_after = list(map(lambda x: self._get_lines(x), response_after["routes"][0]["legs"][0]["steps"]))
+        switches_before = list(map(lambda x: self._get_line_number(x), response_before["routes"][0]["legs"][0]["steps"]))
+        switches_after = list(map(lambda x: self._get_line_number(x), response_after["routes"][0]["legs"][0]["steps"]))
         switches = list(filter(lambda x: x is not None, switches_before + switches_after))
         return switches
 

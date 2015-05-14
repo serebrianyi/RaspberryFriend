@@ -16,6 +16,9 @@ class XmppService(ClientXMPP):
         self.send_presence()
         self.get_roster()
 
+    # Message gets accepted if
+    # (1) Type is chat or normal
+    # (2) Sender is authorized
     def message(self, msg):
         LoggingService.info("----------------------------------")
         if msg["from"] in self.configuration.allowed_access:
