@@ -5,6 +5,7 @@ from commands.DlnaCommand import DlnaCommand
 from commands.PhotoCommand import PhotoCommand
 from commands.VideoCommand import VideoCommand
 from commands.QuoteCommand import QuoteCommand
+from commands.TempCommand import TempCommand
 
 
 class CommandFactory(object):
@@ -14,11 +15,14 @@ class CommandFactory(object):
                       "dlna": DlnaCommand,
                       "photo": PhotoCommand,
                       "video": VideoCommand,
-                      "quotes": QuoteCommand
+                      "quotes": QuoteCommand,
+                      "temp": TempCommand
     }
 
     @classmethod
     def create_command(cls, params):
+        # first word in the message is the command mapped
+        # everything else are parameters
         first_param = params.strip().find(" ")
         if first_param > -1:
             command_name = params[:first_param].lower()

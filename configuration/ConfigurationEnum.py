@@ -1,5 +1,5 @@
 
-
+# list of configuration files
 class ConfigurationEnum(object):
     Xmpp = "xmpp"
     Tram = "tram"
@@ -7,3 +7,4 @@ class ConfigurationEnum(object):
     Gpio = "gpio"
     Wifi = "wifi"
     Quote = "quote"
+    Temp = "temp"
