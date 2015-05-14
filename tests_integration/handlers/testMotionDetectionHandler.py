@@ -1,6 +1,7 @@
 import unittest
 from datetime import datetime, timedelta
-from tests_integration.TestUtil import TestUtil
+
+from tests_integration.util.TestUtil import TestUtil
 from configuration.Configuration import Configuration
 from mock import MagicMock
 from handlers.MotionDetectionHandler import MotionDetectionHandler

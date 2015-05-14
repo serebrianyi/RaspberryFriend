@@ -1,8 +1,9 @@
 import unittest
+import os
+
 from mock import patch
 from util.DateUtil import DateUtil
-import os
-from tests_integration.TestUtil import TestUtil
+from tests_integration.util.TestUtil import TestUtil
 
 
 class PhotoHandlerITCase(unittest.TestCase):

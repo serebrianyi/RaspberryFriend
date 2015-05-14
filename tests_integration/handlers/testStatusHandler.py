@@ -1,7 +1,8 @@
 import unittest
+
 from mock import patch
 from util.DateUtil import DateUtil
-from tests_integration.TestUtil import TestUtil
+from tests_integration.util.TestUtil import TestUtil
 
 
 class StatusHandlerITCase(unittest.TestCase):

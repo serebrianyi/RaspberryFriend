@@ -3,8 +3,9 @@ import sys
 from mock import MagicMock
 from configuration.Configuration import Configuration
 from datetime import datetime, timedelta
-sys.modules['RaspberryFriend.domain_services.logging_service.LoggingService'] = MagicMock()
+sys.modules['domain_services.logging_service.LoggingService'] = MagicMock()
 from handlers.MotionDetectionHandler import MotionDetectionHandler
+
 
 class MotionDetectionHandlerTestCase(unittest.TestCase):
 
@@ -49,5 +50,3 @@ class MotionDetectionHandlerTestCase(unittest.TestCase):
         handler.process(10)
         handler.xmpp_service.send_to_all.assert_called_once_with("Motion on channel 10")
         handler._send_video.assert_called_once_with()
-
-

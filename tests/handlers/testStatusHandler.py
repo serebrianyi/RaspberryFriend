@@ -3,6 +3,7 @@ from handlers.StatusHandler import StatusHandler
 from mock import patch
 from util.DateUtil import DateUtil
 
+
 class StatusHandlerTestCase(unittest.TestCase):
 
     def test_should_process(self):

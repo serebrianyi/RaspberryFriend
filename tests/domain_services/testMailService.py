@@ -3,6 +3,7 @@ from configuration.Configuration import Configuration
 from mock import MagicMock, call
 from domain_services.mail_service.MailService import MailService
 
+
 class MailServiceTestCase(unittest.TestCase):
 
     def test_should_create_mail_from_configuration(self):

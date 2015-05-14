@@ -2,7 +2,7 @@ import unittest
 from configuration.Configuration import Configuration
 from mock import MagicMock
 import sys
-sys.modules['RaspberryFriend.domain_services.logging_service.LoggingService'] = MagicMock()
+sys.modules['domain_services.logging_service.LoggingService'] = MagicMock()
 from domain_services.xmpp_service.XmppService import XmppService
 
 
