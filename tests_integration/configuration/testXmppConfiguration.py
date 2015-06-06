@@ -11,6 +11,9 @@ class XmppConfigurationITCase(unittest.TestCase):
         self.assertIsNotNone(configuration.name)
         self.assertIsNotNone(configuration.password)
         self.assertIsNotNone(configuration.allowed_access)
+        self.assertIsNotNone(configuration.pi_name)
+        self.assertIsNotNone(configuration.slaves)
+        self.assertIsNotNone(configuration.is_master)
 
 
 

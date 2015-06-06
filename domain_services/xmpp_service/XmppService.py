@@ -1,6 +1,7 @@
 from commands.CommandFactory import CommandFactory
 from commands.UnauthorizedCommand import UnauthorizedCommand
 from sleekxmpp import ClientXMPP
+import os
 from domain_services.logging_service.LoggingService import LoggingService
 
 
@@ -16,27 +17,46 @@ class XmppService(ClientXMPP):
         self.send_presence()
         self.get_roster()
 
+    def check_recipient_params(self, params):
+        first_param = params.strip().find(" ")
+        if first_param > -1:
+            pi_name = params[:first_param].lower()
+            if pi_name == self.configuration.pi_name:
+                return params[first_param:].strip()
+            else:
+                if self.configuration.is_master and pi_name not in self.configuration.slaves:
+                    return params
+        else:
+            if self.configuration.is_master:
+                return params
+
     # Message gets accepted if
     # (1) Type is chat or normal
     # (2) Sender is authorized
+    # (3) Correct recipient
     def message(self, msg):
         LoggingService.info("----------------------------------")
         if msg["from"] in self.configuration.allowed_access:
-            LoggingService.info("Authorized access with msg type " + msg['type'])
             if msg['type'] in ('chat', 'normal'):
-                command = CommandFactory.create_command(msg['body'])
-                try:
-                    self.reply(msg, command.process(msg['from']))
-                except Exception as inst:
-                    LoggingService.exception(inst)
-                    return self.reply(msg, str(inst))
+                body = self.check_recipient_params(msg['body'])
+                if body is not None:
+                    LoggingService.info("Authorized access with msg type " + msg['type'])
+                    LoggingService.info("Processing command " + body)
+                    command = CommandFactory.create_command(body)
+                    try:
+                        self.reply(msg, command.process(msg['from']))
+                    except Exception as inst:
+                        LoggingService.exception(inst)
+                        return self.reply(msg, str(inst))
+                else:
+                    LoggingService.info("Different recipient")
         else:
             LoggingService.info("Unauthorized access")
             return self.reply(msg, UnauthorizedCommand(None).process(msg['from']))
         LoggingService.info("----------------------------------")
 
     def reply(self, source_msg, reply_text):
-        source_msg.reply(reply_text).send()
+        source_msg.reply("(" + self.configuration.pi_name + ")" + os.linesep + reply_text).send()
 
     def send_to_all(self, msg):
         for recipient in self.configuration.allowed_access:

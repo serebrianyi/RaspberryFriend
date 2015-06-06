@@ -11,6 +11,6 @@ class TramHandlerITCase(unittest.TestCase):
                 xmpp_service.message(TestUtil.get_xmpp_message("tram"))
                 xmpp_service.reply.assert_called_once_with(
                     TestUtil.get_xmpp_response("tram"),
-                    "Leave at 3:21pm (11,8 - wait for 4 min)"
+                    "Leave at 3:24pm (11,8 - wait for 4 min)"
                 )
 
