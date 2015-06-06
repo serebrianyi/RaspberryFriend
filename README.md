@@ -26,6 +26,9 @@ RaspberryFriend started purely as a home security system, but after a while it b
 # Security as main functionality
 Motion detection will be turned on automatically when your mobile (or mobiles, you can specify as many ip addresses as you want) leaves wifi. In that case every movement registered by motion detector will cause raspberry pi to make a 5 seconds video and send it to you per e-mail. The motion detection will be automatically turned off when any of the ip addresses will become reachable again (i.e. you are at home).
 
+# Master/slave support
+You can connect multiple raspberry pis to a cluster and address every one of them using a name defined in xmpp configuration file as prefix to the command sent via communicator. If you don't provide any name in the command, then it will be processed by master as default.
+
 # Installation
 * Clone the repository to your raspberry pi
 * Install all the dependencies: nose (unit testing framework), mock (python mocking library), requests (http library) and sleekxmpp (xmpp library)                                
@@ -48,6 +51,5 @@ Motion detection will be turned on automatically when your mobile (or mobiles, y
 * Voice recording for the video
 * Support for speakers as a really noisy alarm sound
 * Option to force the alarm to go on/off via command
-* Master/Slave support for multiple raspberry pi's
 * Option to switch static ip addresses to mac addresses in case you don't want to define static ip's for your mobiles
 
