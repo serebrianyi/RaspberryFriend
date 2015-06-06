@@ -1,6 +1,5 @@
-```html
-<span style="font-family:verdana;font-size:24px">About</span>
-```
+
+# About
 RaspberryFriend started purely as a home security system, but after a while it became my main interface of communication with raspberry pi completely removing any need to log in into the system. Right now it supports multiple commands that I use on a daily basis. 
 
 # Features
