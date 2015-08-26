@@ -13,4 +13,4 @@ class DlnaHandler(object):
         # start the service
         proc = subprocess.Popen("sudo service minidlna start", shell=True)
         proc.wait()
-        return "Dlna restarted"
+        return {"message_text": "Dlna restarted"}

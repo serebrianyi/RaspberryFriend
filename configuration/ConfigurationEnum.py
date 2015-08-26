@@ -1,7 +1,7 @@
 
 # list of configuration files
 class ConfigurationEnum(object):
-    Xmpp = "xmpp"
+    Telegram = "telegram"
     Tram = "tram"
     Mail = "mail"
     Pir = "pir"

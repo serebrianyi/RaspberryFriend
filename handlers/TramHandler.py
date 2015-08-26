@@ -18,10 +18,10 @@ class TramHandler(object):
         #calculate waiting time by tram change
         waiting_time = str(int((int(departure_time_after_value)-int(arrival_time_value))/60))
 
-        return "Leave at %s (%s - wait for %s min)" % (
-            departure_time_text,
+        result = "Leave at %s (%s - wait for %s min)" % (departure_time_text,
             (",".join(self._get_switches(response_after, response_before))),
             waiting_time)
+        return {"message_text": result}
 
     def _get_current_time(self):
         return DateUtil.get_current_time()

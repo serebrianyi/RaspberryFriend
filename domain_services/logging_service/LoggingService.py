@@ -2,7 +2,6 @@ import logging
 import logging.config
 import os
 
-
 class LoggingService(object):
 
     logging.config.fileConfig(os.path.join(os.path.dirname(__file__), 'logging.conf'), None, False)

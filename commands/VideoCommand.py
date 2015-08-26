@@ -12,7 +12,7 @@ class VideoCommand(AbstractCommand):
             length = 5
         else:
             length = int(self.params.strip())
-        return self._get_video_handler().process_to_sender(sender, length)
+        return self._get_video_handler().process(length)
 
     def _get_video_handler(self):
         return VideoHandler()

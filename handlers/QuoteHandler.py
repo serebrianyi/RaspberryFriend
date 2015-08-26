@@ -11,7 +11,7 @@ class QuoteHandler(object):
         for quote in configuration.quotes:
             response += quote + ": " + self._get_response(quote)["list"]["resources"][0]["resource"]["fields"]["price"] \
                         + os.linesep
-        return response
+        return {"message_text": response}
 
     def _get_response(self, quote):
         url = "http://finance.yahoo.com/webservice/v1/symbols/%s/quote?format=json" % quote

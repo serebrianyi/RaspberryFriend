@@ -40,6 +40,6 @@ class CommandFactoryTestCase(unittest.TestCase):
         command = CommandFactory.create_command("status2")
         self.assertIsNotNone(command)
         self.assertIsInstance(command, UnknownCommand)
-        self.assertEqual("Unknown command", command.process("reer"))
+        self.assertEqual({"message_text": "Unknown command"}, command.process("reer"))
 
 

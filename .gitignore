@@ -12,5 +12,6 @@
 logs/log.txt
 configuration/files/tram.json
 configuration/files/wifi.json
-configuration/files/xmpp.json
+configuration/files/telegram.json
 configuration/files/mail.json
+configuration/files/quote.json

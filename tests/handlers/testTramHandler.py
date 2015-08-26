@@ -46,7 +46,7 @@ class TramHandlerTestCase(unittest.TestCase):
         handler._get_response = MagicMock(return_value=json.loads(jsonString))
         handler._get_current_time = MagicMock(return_value=time.time())
 
-        self.assertEqual("Leave at 14:41 (11,11 - wait for 0 min)", handler.process("src", "dest", "waypoint"))
+        self.assertEqual({"message_text": "Leave at 14:41 (11,11 - wait for 0 min)"}, handler.process("src", "dest", "waypoint"))
         self.assertEqual(handler._get_response.mock_calls, [call('src', 'waypoint', str(int(time.time()))), call('waypoint', 'dest', '1423402887')])
 
 

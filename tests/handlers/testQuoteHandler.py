@@ -40,7 +40,7 @@ class QuoteHandlerTestCase(unittest.TestCase):
         configuration.quotes = ["testquote1", "testquote2"]
         handler._get_configuration = MagicMock(return_value=configuration)
 
-        self.assertEqual("testquote1: 304.799988{0}testquote2: 304.799988{0}".format(os.linesep), handler.process())
+        self.assertEqual({"message_text": "testquote1: 304.799988{0}testquote2: 304.799988{0}".format(os.linesep)}, handler.process())
         self.assertEqual(handler._get_response.mock_calls, [call('testquote1'), call('testquote2')])
 
 

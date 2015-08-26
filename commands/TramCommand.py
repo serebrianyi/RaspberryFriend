@@ -13,13 +13,13 @@ class TramCommand(AbstractCommand):
         # other option is "home"
         if self.params is None or self.params.lower() == "work":
             return self._get_tram_handler().process(configuration.home_address,
-                                                    configuration.work_address[sender]["target"],
-                                                    configuration.work_address[sender]["waypoint"]
+                                                    configuration.work_address[str(sender)]["target"],
+                                                    configuration.work_address[str(sender)]["waypoint"]
                                                     )
         elif self.params.lower() == "home":
-            return self._get_tram_handler().process(configuration.work_address[sender]["target"],
+            return self._get_tram_handler().process(configuration.work_address[str(sender)]["target"],
                                                     configuration.home_address,
-                                                    configuration.work_address[sender]["waypoint"])
+                                                    configuration.work_address[str(sender)]["waypoint"])
         else:
             return "Unknown tram params: " + self.params
 

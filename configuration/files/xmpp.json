@@ -1,8 +1,0 @@
-{
-    "name": "from@jabber.de",
-    "password": "password",
-    "allowed_access": ["fake1@jabber.de/yaxim.fake1", "fake2@jabber.de/yaxim.fake2"],
-    "pi_name": "master",
-    "slaves": ["slave"],
-    "is_master": true
-}
