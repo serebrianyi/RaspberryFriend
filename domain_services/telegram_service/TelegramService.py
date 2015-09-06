@@ -16,9 +16,10 @@ class TelegramService(object):
     def _load_data(self):
         data = {'offset': self.offset + 1, 'limit': 5, 'timeout': 0}
         try:
-            request = requests.post(self.configuration.url + self.configuration.token + '/getUpdates', data=data, timeout=1)
-        except:
+            request = requests.post(self.configuration.url + self.configuration.token + '/getUpdates', data=data, timeout=2)
+        except Exception as e:
             LoggingService.info('Error getting updates')
+            LoggingService.info(e)
             return []
 
         if not request.status_code == 200:
@@ -88,11 +89,9 @@ class TelegramService(object):
 
     def connect(self):
         while True:
-            LoggingService.info('while True')
             try:
-                LoggingService.info('self.check_updates(self._load_data())')
+                LoggingService.info('checking for updates')
                 self.check_updates(self._load_data())
-                LoggingService.info('time.sleep(self.configuration.interval)')
                 time.sleep(self.configuration.interval)
             except KeyboardInterrupt:
                 break
