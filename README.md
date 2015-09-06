@@ -3,7 +3,7 @@
 RaspberryFriend started purely as a home security system, but after a while it became my main interface of communication with raspberry pi completely removing any need to log in into the system. Right now it supports multiple commands that I use on a daily basis. 
 
 # Features
-* Mobile integration over any xmpp communicator
+* Mobile integration over any telegram communicator
 * Security system based on motion detection, activated only in case no mobile is in wifi
 * Photo + video capibility using e-mail
 * Getting the list of prefered stock quotes
@@ -11,7 +11,7 @@ RaspberryFriend started purely as a home security system, but after a while it b
 
 # How it works
 1. Install RaspberryFriend (check the installation section)
-2. Install any xmpp client on your mobile (I'm using yaxim, works very nicely)
+2. Install the telegram client on your mobile
 3. Tell your raspberry pi what to do!
 
 # List of supported commands
@@ -31,18 +31,17 @@ You can connect multiple raspberry pis to a cluster and address every one of the
 
 # Installation
 * Clone the repository to your raspberry pi
-* Install all the dependencies: nose (unit testing framework), mock (python mocking library), requests (http library) and sleekxmpp (xmpp library)                                
-		```pip install nose mock requests sleekxmpp```
+* Install all the dependencies: nose (unit testing framework), mock (python mocking library) and requests (http library)
+		```pip install nose mock requests```
 * Follow the instructions from https://github.com/adafruit/Adafruit_Python_DHT to install the python library to read the DHT series of humidity and temperature sensors
 * Set the correct path for your log file in domain_services/logging_service/logging.conf
 * Set the values in the config files in configuration/files:
 	* pir - config for motion detector (like this [one](http://www.adafruit.com/products/189))
-	* mail - config for e-mail account from where raspberry pi will send the mails and setup of the recipient list
 	* quote - list of the stock symbols used by http://finance.yahoo.com/
 	* temp - config for DHT sensor (like this [one](http://www.adafruit.com/products/393))
 	* tram - specifies your home address and working address (supports multiple working address that will be distinguished by the sender id)
 	* ip - list of ip addresses to check 
-	* xmpp - config for the xmpp communication
+	* telegram - config for the telegram communication
 * Run the tests:
 	* For unit tests go to tests folder and run ```nosetests-2.7 --exe```
 	* For integration tests go to tests_integration folder and run ```nosetests-2.7 --exe```
