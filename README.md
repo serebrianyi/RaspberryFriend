@@ -51,4 +51,7 @@ You can connect multiple raspberry pis to a cluster and address every one of the
 * Support for speakers as a really noisy alarm sound
 * Option to force the alarm to go on/off via command
 * Option to switch static ip addresses to mac addresses in case you don't want to define static ip's for your mobiles
+ 
+# License
+MIT
 
